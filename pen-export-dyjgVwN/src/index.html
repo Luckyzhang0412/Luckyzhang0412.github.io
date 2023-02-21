@@ -1,0 +1,97 @@
+<html>
+   <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+  
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+  
+<head>
+  <meta charset="utf-8">
+  <title>Swipe between maps</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js"></script>
+   <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.js"></script>
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css" type="text/css">
+  
+  <meta charset='utf-8' />
+  <title>Toggle layers</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  
+</head>
+ 
+
+<body>
+
+  
+  <div id="map"></div>
+   <div id="menu">
+    <h3>Choose the information</h3>
+    <label class="container">Edinburgh_SIMD
+      <input id="Edinburgh_SIMD" type="radio" checked="checked" name="radio"><br>
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Edinburgh Annual Daily Average Car Flow
+      <input id="EdinburghAnnualDailyAverageCarFlow" type="radio" name="radio">
+      <span class="checkmark"></span>
+
+      <label class="container">The Statistic And Data At Each Point
+      <input id="TheStatisticAndDataAtEachPoint" type="radio" checked="checked" name="radio"><br>
+      <span class="checkmark"></span>
+    </label>
+   
+  
+  
+    </label>
+  </div>
+  <div class="map-overlay" id="features2">
+     <h2> A combination map of SIMD and traffic information at Edinburgh. </h2>
+   <div id="pd">
+     <p> The base map is a Scottish Index of Multiple Deprivation(SIMD)  map of Edinburgh. Try to use the mouse to hover over the two layers and click the green icons in the third map(Vehicle flow counting points). Summarize what did you find out? 
+     </p>
+     </div> 
+       </div>
+  <div class="map-overlay" id="legend">
+      <div>&#8592; More deprived</div>
+    </div>
+
+  <div id='console'>
+    <h4>Car flow at different count points</h4>
+    <p2>Data: <a href='https://roadtraffic.dft.gov.uk/local-authorities/29/'>Traffic Data </a> in City of Edinburgh, 2010-2021</p2>
+
+    
+      <div class='session'>
+  <h5>Year</h5>
+  <div class='row' id='filters'>
+    <input id='all' type='radio' name='toggle' value='all' checked='checked'>
+    <label for='all'>All (2010-2021)</label>
+    
+  </div>
+</div>
+
+
+    
+    
+</div>
+
+  
+  
+  
+</div>
+  
+  
+  
+  
+</body>
+
+</html>
